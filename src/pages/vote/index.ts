@@ -1,0 +1,1 @@
+export { VoteList } from "./list.tsx";

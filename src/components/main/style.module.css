@@ -176,3 +176,15 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
 }
+
+.strong_blue {
+    background: var(--xd-blue);
+}
+
+.auth_dialog {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 20px;
+    background: var(--xd-black) !important;
+}

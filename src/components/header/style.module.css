@@ -52,7 +52,7 @@
 }
 
 .header__auth_text {
-    background: var(--xd-black);
+    background: var(--xd-blue);
     color: var(--xd-white);
     padding: 2px;
     border-radius: 7px;

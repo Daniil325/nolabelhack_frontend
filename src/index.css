@@ -2252,3 +2252,19 @@ p:last-child {
         max-width: 24.4791666667vw;
     }
 }
+
+.p-paginator {
+    background: var(--xd-black) !important;
+    border: var(--xd-white) 2px solid;
+    border-radius: 50px;
+    width: max-content;
+    margin: auto;
+
+}
+
+.p-highlight, .p-paginator-page:hover {
+    background: var(--xd-black) !important;
+    border: var(--xd-white) 2px solid;
+    border-radius: 90px;
+    color: var(--xd-blue);
+}
