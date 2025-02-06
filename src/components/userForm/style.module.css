@@ -1,0 +1,25 @@
+.form__container {
+    margin: auto;
+    border: var(--xd-white) 2px solid;
+    border-radius: 30px;
+}
+
+.form__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 30px;
+}
+
+
+
+.field {
+    width: 100%;
+}

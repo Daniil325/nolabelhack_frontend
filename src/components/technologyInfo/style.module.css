@@ -1,0 +1,59 @@
+.info_title {
+    font-size: 43px;
+    line-height: 48.8px;
+}
+
+.info_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+    gap: 20px;
+    max-width: 1300px;
+    margin: auto;
+    flex: 1 0 auto;
+}
+
+.info_item {
+    display: flex;
+    gap: 20px;
+}
+
+.info_item:last-child {
+    grid-column: span 2;
+}
+
+.info_item__prefix_number {
+    font-family: Inter;
+    font-size: 106px;
+    font-weight: 400;
+    line-height: 110px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    font-family: "Inter Regular", sans-serif;
+}
+
+.info_item__prefix_name {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    background: var(--xd-blue);
+    font-family: "Inter Regular", sans-serif;
+}
+
+.info_item__text {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--xd-white);
+    font-family: "Inter Regular";
+}

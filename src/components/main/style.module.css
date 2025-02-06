@@ -1,0 +1,178 @@
+.section {
+    max-width: 1440px;
+}
+
+.section__title {
+    font-family: Inter;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 108.75px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--xd-white);
+}
+
+.section__text_container {
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+}
+
+.section__title {
+    -webkit-box-flex: 0;
+    font-family: Inter;
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 108.75px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    flex: 0 0 100%;
+}
+
+.section__text {
+    flex: 0 0 100%;
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0;
+    padding-top: 3.90625vw;
+    pointer-events: none;
+    color: var(--xd-white);
+}
+
+.section__text_p {
+    font-family: Inter;
+    font-size: 20.5px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+@media (min-width: 1200px) {
+    .vctheme-hero-home {
+        margin-top: 33px;
+    }
+
+    .vctheme-hero-home .vctheme-hero-home__content {
+        display: flex;
+        position: relative;
+        flex-wrap: nowrap;
+    }
+
+    .vctheme-hero-home .vctheme-hero-home__content > * {
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .vctheme-hero-home .vctheme-hero-home__content .vctheme-hero-home__title {
+        align-self: center;
+    }
+
+    .vctheme-hero-home .vctheme-hero-home__content .vctheme-hero-home__thumb {
+        pointer-events: none;
+        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -ms-transform: translate3d(-100%, 0, 0);
+        -moz-transform: translate3d(-100%, 0, 0);
+        -o-transform: translate3d(-100%, 0, 0);
+        position: relative;
+        z-index: -1;
+        margin: 0;
+        padding: 0 300px;
+    }
+
+    .vctheme-hero-home .vctheme-hero-home__content .vctheme-hero-home__text {
+        transform: translate3d(-200%, 0, 0);
+        -webkit-transform: translate3d(-200%, 0, 0);
+        -ms-transform: translate3d(-200%, 0, 0);
+        -moz-transform: translate3d(-200%, 0, 0);
+        -o-transform: translate3d(-200%, 0, 0);
+    }
+
+    .vctheme-hero-home .vctheme-hero-home__content .vctheme-hero-home__text {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0;
+        padding-top: 3.90625vw;
+        pointer-events: none;
+    }
+
+    .vctheme-hero-home
+        .vctheme-hero-home__content
+        .vctheme-hero-home__text
+        .vctheme-hero-home__text__content {
+        pointer-events: all;
+        max-width: 24.4791666667vw;
+    }
+}
+
+.vctheme-hero-service {
+    margin-top: 70px;
+}
+
+.vctheme-hero-service .vctheme-hero-service__title {
+    text-transform: lowercase;
+    font-size: clamp(40px, 8.4375vw, 162px);
+    line-height: clamp(40px, 7.5520833333vw, 145px);
+}
+
+.vctheme-hero-service .vctheme-hero-service__title.is-strong-underline strong,
+.vctheme-hero-service .vctheme-hero-service__title.is-strong-underline b {
+    background-size: 100% clamp(18px, 2.0833333333vw, 40px);
+}
+
+.vctheme-hero-service .vctheme-hero-service__thumb {
+    margin-top: 30px;
+}
+
+.vctheme-hero-service .vctheme-hero-service__thumb img {
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .vctheme-hero-service .vctheme-hero-service__thumb {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.main {
+    background: var(--xd-blue);
+    max-width: 1440px;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.avatar {
+    width: 30%;
+    height: 100%;
+}
+
+.avatar_image {
+    height: 100%;
+}
+
+.main_text {
+    background-color: #ffffffbf;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Inter;
+    font-size: 20.5px;
+    font-weight: 900;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}

@@ -1,0 +1,1 @@
+export { TechnologyInfo } from "./technologyInfo.tsx";

@@ -24,11 +24,14 @@
       "@pages/admin/*": [
         "./src/pages/admin/*"
       ],
-      "@components/main/*": [
-        "./src/components/main/*"
+      "@components/*": [
+        "./src/components/*"
       ],
       "@pages/main/*": [
         "./src/pages/main/*"
+      ],
+      "@api": [
+        "./src/providers/api.ts"
       ]
     },
     /* Linting */
