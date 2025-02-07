@@ -1,8 +1,9 @@
 # Команда xd_cult
 # Чтобы запустить сервер, нужно выполнить следующие действия:
-1) docker-compose build
-2) docker-compose up
+1) клопировать данный репозиторий
+2) прописать docker-compose up --build
 3) перейдите по ссылке [http://localhost:3000/](http://localhost:3000/)
+   
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
