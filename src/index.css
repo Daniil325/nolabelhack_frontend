@@ -9,6 +9,10 @@
     --xd-blue: #0045ff;
 }
 
+.datePicker {
+    width: 100%;
+  }
+
 * {
     font-family: "Inter Regular", sans-serif;
 }
@@ -2267,4 +2271,17 @@ p:last-child {
     border: var(--xd-white) 2px solid;
     border-radius: 90px;
     color: var(--xd-blue);
+}
+
+.p-inputtext {
+    width: 100% !important;
+}
+
+.p-dataview-content {
+    background: var(--xd-black) !important;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: var(--xd-white);
+    margin-bottom: 50px;
 }

@@ -6,13 +6,7 @@ import styles from "./style.module.css";
 import { Button } from "primereact/button";
 import { usePostItem } from "@/providers/api";
 
-type Props = {
-    onClick: any,
-    formHeader: string,
-    
-}
-
-export const UserForm = () => {
+export const LoginForm = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
@@ -31,15 +25,12 @@ export const UserForm = () => {
         return errors[name] && <small className="p-error">{errors[name].message}</small>;
     };
 
-    const postMutation = usePostItem("user/registration");
+    const postMutation = usePostItem("user/login");
 
     const onRegisterClick = () => {
         postMutation.mutate({
-            email: email,
+            username : email,
             password: password,
-            is_active: null,
-            is_superuser: null,
-            is_verified: true,
         });
     };
 
@@ -91,7 +82,7 @@ export const UserForm = () => {
                                 label="Зарегистрироваться"
                                 onClick={onRegisterClick}
                             />
-                            <Button className={styles.button1} label="Зарегистрироваться" />
+                            <Button className={styles.button1} label="Войти" />
                         </div>
                     </div>
                 </div>

@@ -18,8 +18,25 @@
     gap: 30px;
 }
 
-
-
 .field {
     width: 100%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.button1 {
+    background: var(--xd-black);
+    font-size: 20px;
+}
+
+.button1:first-child {
+    border-color: var(--xd-blue);
+}
+
+.button1:last-child {
+    border-color: var(--xd-blue);
 }
