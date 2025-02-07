@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./style.module.css";
 
 type VoteItemProps = {
@@ -6,8 +7,14 @@ type VoteItemProps = {
 };
 
 export const VoteItem = ({ title, description }: VoteItemProps) => {
+    const nav = useNavigate()
+
+    const onClick = () => {
+        nav("/vote/detail")
+    }
+
     return (
-        <div className={styles.main}>
+        <div className={styles.main} onClick={onClick}>
             <div className={styles.avatar}>
                 <img className={styles.avatar_image} src="public/Ellipse.png" alt="" />
             </div>
@@ -51,8 +58,6 @@ export const Main = () => {
                     </div>
                 </div>
             </div>
-
-            <VoteItem />
         </>
     );
 };

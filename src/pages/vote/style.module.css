@@ -46,3 +46,44 @@
 .button1:last-child {
     border-color: var(--xd-blue);
 }
+
+.button1 {
+    margin: auto;
+    background: var(--xd-blue);
+    color: var(--xd-white);
+}
+
+.form__wrapper {
+    max-width: 650px;
+}
+
+.f_title {
+    font-size: 40px;
+}
+
+.button2 {
+    margin: auto;
+    background: var(--xd-black);
+    color: var(--xd-white);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.conf__container {
+    margin: auto;
+    border: var(--xd-white) 2px solid;
+    background: var(--xd-blue);
+    border-radius: 30px;
+}
+
+.vvvv {
+    display: flex;
+    gap: 30px;
+}
+
+.button3 {
+    width: 100%;
+    background: var(--xd-blue);
+    color: var(--xd-white);
+    margin: auto;
+}

@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export const CreateVote = () => {
     const [title, setTitle] = useState<string>("");
@@ -22,19 +23,22 @@ export const CreateVote = () => {
 
     const mutation = useMutation({
         mutationFn: async (postData: object) => {
-            
+            //@ts-ignore
             const { data } = await axios.post(`${BASE_API_URL}vote`, postData["voteData"]);
-
+            //@ts-ignore
             for (const answer in postData["answerData"]) {
                 const postObj = {
                     voteId: data,
+                    //@ts-ignore
                     answerText: postData["answerData"][answer],
                     createdAt: new Date()
                 }
-                const { data: answerResult } = await axios.post(`${BASE_API_URL}answer`, postObj)
+                await axios.post(`${BASE_API_URL}answer`, postObj)
             }
         },
     });
+
+    const navigation = useNavigate();
 
     const createClick = () => {
         mutation.mutate(
@@ -49,6 +53,7 @@ export const CreateVote = () => {
             answerData: [answer1, answer2, answer3]
         }
         );
+        navigation("/votelist")
     };
 
     return (
@@ -135,9 +140,9 @@ export const CreateVote = () => {
                             </span>
                         </div>
 
-                        <div className={styles.buttons}>
+                        <div>
                             <Button
-                                className={styles.button1}
+                                className={styles.button3}
                                 label="Создать"
                                 onClick={createClick}
                             />

@@ -1,45 +1,35 @@
 import { InputText } from "primereact/inputtext";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { classNames } from "primereact/utils";
 import styles from "./style.module.css";
 import { Button } from "primereact/button";
-import { usePostItem } from "@/providers/api";
+import { Password } from "primereact/password";
+import { useNavigate } from "react-router-dom";
 
 export const LoginForm = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
-    const defaultValues = {
-        email: "",
-        password: "",
-    };
-    const {
-        control,
-        formState: { errors },
-        handleSubmit,
-        reset,
-    } = useForm({ defaultValues });
 
-    const getFormErrorMessage = (name) => {
+    const getFormErrorMessage = (name: string) => {
+        //@ts-ignore
         return errors[name] && <small className="p-error">{errors[name].message}</small>;
     };
 
-    const postMutation = usePostItem("user/login");
+    //const postMutation = usePostItem("user/login");
+
+    const navigate = useNavigate();
 
     const onRegisterClick = () => {
-        postMutation.mutate({
-            username : email,
-            password: password,
-        });
+        localStorage.setItem("tmp", "gooooooooooool");
+        navigate("/votelist");
     };
 
     return (
         <>
             <div className={styles.form__container}>
                 <div className={styles.form__wrapper}>
-                    <h3>Регистрация</h3>
-                    <p>Ваш первый шаг к честным голосованиям!</p>
+                    <h3>Вход</h3>
                     <div className={styles.form}>
                         <div className="field">
                             <span className="p-float-label">
@@ -51,6 +41,7 @@ export const LoginForm = () => {
 
                                 <label
                                     htmlFor="name"
+                                    //@ts-ignore
                                     className={classNames({ "p-error": errors.email })}
                                 >
                                     Почта
@@ -61,13 +52,13 @@ export const LoginForm = () => {
 
                         <div className="field">
                             <span className="p-float-label">
-                                <InputText
+                                <Password
                                     value={password}
                                     onChange={(el) => setPassword(el.target.value)}
-                                    autoFocus
                                 />
                                 <label
                                     htmlFor="name"
+                                    //@ts-ignore
                                     className={classNames({ "p-error": errors.password })}
                                 >
                                     Пароль
@@ -82,7 +73,7 @@ export const LoginForm = () => {
                                 label="Зарегистрироваться"
                                 onClick={onRegisterClick}
                             />
-                            <Button className={styles.button1} label="Войти" />
+                            <Button className={styles.button1} label="Войти" onClick={onRegisterClick} />
                         </div>
                     </div>
                 </div>

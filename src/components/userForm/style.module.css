@@ -38,5 +38,11 @@
 }
 
 .button1:last-child {
-    border-color: var(--xd-blue);
+    border-color: var(--xd-white);
+    color: var(--xd-blue);
+}
+
+.button1:last-child:hover {
+    background: var(--xd-white);
+    transition: 1s;
 }

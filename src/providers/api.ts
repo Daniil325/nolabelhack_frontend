@@ -10,6 +10,7 @@ export const useGetList = (resourse: string) => {
             const data = await axios.get(`${BASE_API_URL}${resourse}/`);
             return data;
         },
+        refetchInterval: 2000
     });
 };
 
@@ -26,13 +27,13 @@ export const useGetItem = async (resourse: string, itemId: string) => {
 export const usePostItem = (resourse: string) => {
     return useMutation({
         mutationFn: async (postData: object) => {
-            const { data } = await axios.post(`${BASE_API_URL}${resourse}`, postData);
+            const { data } = await axios.post(`${BASE_API_URL}${resourse}/`, postData);
             return data;
         },
-        onSuccess: (data, variables, context) => {
+        onSuccess: (data) => {
             return data
         },
-        onError: (error, variables, context) => {
+        onError: (error) => {
             return error
         },
     });

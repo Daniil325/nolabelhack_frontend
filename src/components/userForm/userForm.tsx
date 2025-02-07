@@ -1,33 +1,17 @@
 import { InputText } from "primereact/inputtext";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import { classNames } from "primereact/utils";
 import styles from "./style.module.css";
 import { Button } from "primereact/button";
 import { usePostItem } from "@/providers/api";
 
-type Props = {
-    onClick: any,
-    formHeader: string,
-    
-}
 
 export const UserForm = () => {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
-    const defaultValues = {
-        email: "",
-        password: "",
-    };
-    const {
-        control,
-        formState: { errors },
-        handleSubmit,
-        reset,
-    } = useForm({ defaultValues });
-
-    const getFormErrorMessage = (name) => {
+    const getFormErrorMessage = (name: string) => {
+        //@ts-ignore
         return errors[name] && <small className="p-error">{errors[name].message}</small>;
     };
 
@@ -60,6 +44,7 @@ export const UserForm = () => {
 
                                 <label
                                     htmlFor="name"
+                                    //@ts-ignore
                                     className={classNames({ "p-error": errors.email })}
                                 >
                                     Почта
@@ -77,6 +62,7 @@ export const UserForm = () => {
                                 />
                                 <label
                                     htmlFor="name"
+                                    //@ts-ignore
                                     className={classNames({ "p-error": errors.password })}
                                 >
                                     Пароль

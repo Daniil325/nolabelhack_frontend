@@ -3,7 +3,6 @@ import styles from "./style.module.css";
 export const TechnologyInfo = () => {
     return (
         <>
-        <h1 className={styles.info_title}>О нашей технологии</h1>
             <div className={styles.info_container}>
                 <div className={styles.info_item}>
                     <div className={styles.info_item__prefix}>

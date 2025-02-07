@@ -1,12 +1,12 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { UserForm } from "@/components/userForm";
+import { LoginForm } from "@/components/userForm/loginForm";
 
 export const LoginPage = () => {
     return (
         <>
             <Header />
-            <UserForm />
+            <LoginForm />
             <Footer />
         </>
     );

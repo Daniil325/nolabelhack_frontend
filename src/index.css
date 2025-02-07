@@ -2285,3 +2285,11 @@ p:last-child {
     color: var(--xd-white);
     margin-bottom: 50px;
 }
+
+.p-password {
+    width: 100% !important;
+}
+
+.p-button-label:hover {
+    color: var(--xd-white);
+}

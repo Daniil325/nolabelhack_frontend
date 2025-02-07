@@ -4,6 +4,8 @@ import { VoteItem } from "@/components/main/main";
 import styles from "./style.module.css";
 import { useGetList } from "@/providers/api";
 import { DataView } from "primereact/dataview";
+import { Button } from "primereact/button";
+import { useNavigate } from "react-router-dom";
 
 type Vote = {
     id: string;
@@ -15,12 +17,18 @@ type Vote = {
 };
 
 export const VoteList = () => {
-    const { status, data, error, isFetching } = useGetList("vote");
+    const { data } = useGetList("vote");
 
     const itemTemplate = (items: Vote[]) => {
         return items.map((el) => {
             return <VoteItem title={el.title} description={el.description} />;
         });
+    };
+
+    const nav = useNavigate();
+
+    const onClick = () => {
+        nav("/vote/create");
     };
 
     if (data) {
@@ -32,7 +40,18 @@ export const VoteList = () => {
                 <main>
                     <div className="search"></div>
                     <div className={styles.vote_items}>
-                        <DataView className={styles.view} value={items} paginator rows={3} listTemplate={itemTemplate} />
+                        <DataView
+                            className={styles.view}
+                            value={items}
+                            paginator
+                            rows={3}
+                            listTemplate={itemTemplate}
+                        />
+                        <Button
+                            className={styles.button1}
+                            label="Создать голосование"
+                            onClick={onClick}
+                        />
                     </div>
                 </main>
                 <Footer />
