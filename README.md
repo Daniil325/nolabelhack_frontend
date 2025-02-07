@@ -1,3 +1,6 @@
+# Запуск
+1) docker-compose build
+2) docker-compose up
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
